@@ -22,9 +22,22 @@ namespace Embroidery
     {
         Line newLine;
         PointCollection myPointCollection = new PointCollection();
-        public CanvasPage()
+        public CanvasPage(double HoopSize)
         {
             InitializeComponent();
+            CreateHoop(HoopSize);
+
+        }
+
+        private void CreateHoop(double hoopSize)
+        {
+            
+            Ellipse myHoop = new Ellipse();
+            myHoop.Stroke = System.Windows.Media.Brushes.Black;
+            myHoop.Width = hoopSize * 100;
+            myHoop.Height = hoopSize * 100;
+            
+            myCanvas.Children.Add(myHoop);
         }
 
         private void Line_Type_Click(object sender, RoutedEventArgs e)

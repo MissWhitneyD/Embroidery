@@ -27,7 +27,7 @@ namespace Embroidery
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            CanvasPage canvasPage = new CanvasPage();
+            CanvasPage canvasPage = new CanvasPage(HoopSizeSlider.Value);
             this.NavigationService.Navigate(canvasPage);
         }
 
