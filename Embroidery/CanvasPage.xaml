@@ -1,0 +1,23 @@
+﻿<Page x:Class="Embroidery.CanvasPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Embroidery"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Embroidery Design - Canvas" Background="White">
+    <Grid>
+        <ToolBarTray DockPanel.Dock="Left">
+            <ToolBar>
+                <Button Style="{DynamicResource LineButton}"  Content="Line" Click="Line_Type_Click"/>
+            </ToolBar>
+        </ToolBarTray>
+        <Canvas Background="Aqua" x:Name="myCanvas" MouseDown="Start_Point" MouseUp="End_Point" MouseMove="Move_Line">
+
+
+        
+        
+        </Canvas>
+    </Grid>
+</Page>
