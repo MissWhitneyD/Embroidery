@@ -13,7 +13,7 @@
                 <Button Style="{DynamicResource LineButton}"  Content="Line" Click="Line_Type_Click"/>
             </ToolBar>
         </ToolBarTray>
-        <Canvas Background="Aqua" x:Name="myCanvas" MouseDown="Start_Point" MouseUp="End_Point" MouseMove="Move_Line">
+        <Canvas Background="White" x:Name="myCanvas" MouseDown="Start_Point" MouseUp="End_Point" MouseMove="Move_Line">
 
 
         
