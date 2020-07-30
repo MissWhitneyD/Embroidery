@@ -58,6 +58,7 @@
     <Compile Include="CanvasPage.xaml.cs">
       <DependentUpon>CanvasPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Stitch.cs" />
     <Compile Include="SetupPage.xaml.cs">
       <DependentUpon>SetupPage.xaml</DependentUpon>
     </Compile>

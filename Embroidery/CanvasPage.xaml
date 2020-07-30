@@ -5,19 +5,27 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Embroidery"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
       Title="Embroidery Design - Canvas" Background="White">
-    <Grid>
-        <ToolBarTray DockPanel.Dock="Left">
-            <ToolBar>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <ToolBarTray >
+            <ToolBar Grid.Row="1" Grid.Column="1">
                 <Button Style="{DynamicResource LineButton}"  Content="Line" Click="Line_Type_Click"/>
             </ToolBar>
         </ToolBarTray>
-        <Canvas Background="White" x:Name="myCanvas" MouseDown="Start_Point" MouseUp="End_Point" MouseMove="Move_Line">
-
-
+        <Viewbox Grid.Row="2" Grid.Column="1">
+        <Canvas Background="White" x:Name="myCanvas" MouseDown="Start_Point" 
+                MouseUp="End_Point" MouseMove="Move_Line" >
         
         
         </Canvas>
+        </Viewbox>
     </Grid>
 </Page>

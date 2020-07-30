@@ -30,13 +30,15 @@ namespace Embroidery
         }
 
         private void CreateHoop(double hoopSize)
-        {
-            
+        {           
             Ellipse myHoop = new Ellipse();
             myHoop.Stroke = System.Windows.Media.Brushes.Black;
             myHoop.Width = hoopSize * 100;
             myHoop.Height = hoopSize * 100;
-            
+            Canvas.SetLeft(myHoop, 100);
+            Canvas.SetTop(myHoop, 100);
+            myCanvas.Width = (200 + (hoopSize * 100));
+            myCanvas.Height = (200 + (hoopSize * 100));
             myCanvas.Children.Add(myHoop);
         }
 
@@ -57,6 +59,7 @@ namespace Embroidery
                 newLine.Y2 = position.Y;
                 newLine.StrokeThickness = 2;
                 newLine.Stroke = System.Windows.Media.Brushes.Black;
+                
                 myCanvas.Children.Add(newLine);
 
             }
@@ -83,6 +86,8 @@ namespace Embroidery
                 }
             }
         }
+
+      
     }
 
 }

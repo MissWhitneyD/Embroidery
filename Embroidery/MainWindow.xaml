@@ -5,5 +5,5 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Embroidery"
         mc:Ignorable="d" Background="DarkGray"
-        Title="Embroidery Design" Height="450" Width="800" Source="SetupPage.xaml" ShowsNavigationUI="False">
+        Title="Embroidery Design" Height="1000 " Width="1000" WindowStartupLocation="CenterScreen" Source="SetupPage.xaml" ShowsNavigationUI="False">
 </NavigationWindow>
