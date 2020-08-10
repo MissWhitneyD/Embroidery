@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Embroidery.Resources;
 namespace Embroidery
 {
     /// <summary>
@@ -22,8 +22,11 @@ namespace Embroidery
     {
         Line newLine;
         PointCollection myPointCollection = new PointCollection();
+        List<Stitch> myStitches = new List<Stitch>();
+
         public CanvasPage(double HoopSize)
         {
+            Get_Stitch_Types();
             InitializeComponent();
             CreateHoop(HoopSize);
 
@@ -87,6 +90,14 @@ namespace Embroidery
             }
         }
 
+        private void Get_Stitch_Types()
+        {
+            string[] lines = System.IO.File.ReadAllLines(@"../../Resources/Stitches.txt");
+            foreach (string line in lines)
+            {
+                
+            }
+        }
       
     }
 

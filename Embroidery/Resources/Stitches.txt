@@ -1,0 +1,2 @@
+﻿Straight Stitch	'4, 1'
+Back Stitch	'5, .5'
