@@ -62,7 +62,7 @@ namespace Embroidery
                 newLine.Y2 = position.Y;
                 newLine.StrokeThickness = 2;
                 newLine.Stroke = System.Windows.Media.Brushes.Black;
-                
+                newLine.StrokeDashArray = new DoubleCollection() { 2 };
                 myCanvas.Children.Add(newLine);
 
             }
@@ -95,7 +95,13 @@ namespace Embroidery
             string[] lines = System.IO.File.ReadAllLines(@"../../Resources/Stitches.txt");
             foreach (string line in lines)
             {
-                
+
+                var data = line.Split('\t');
+                //var solid = data[1].Split(' ');
+                var temp = new Stitch(data[0] , DoubleCollection.Parse(data[1]));
+                myStitches.Add(temp);
+                //temp.MyLine.StrokeDashArray = new DoubleCollection.Parse(4);//DoubleCollection.Parse(data[1]);
+                //Console.WriteLine($"<{name}>");
             }
         }
       
